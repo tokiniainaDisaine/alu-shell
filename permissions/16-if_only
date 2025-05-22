@@ -1,2 +1,2 @@
 #!/bin/bash
-find hello >> chown vincent {} \
+chown vincent hello
