@@ -1,1 +1,2 @@
-#!/bin/bashtr "ac" "ze"
+#!/bin/bash
+tr "ac" "ze"
