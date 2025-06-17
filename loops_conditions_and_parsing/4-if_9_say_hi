@@ -2,7 +2,7 @@
 # This Bash script displays Best School 10 times, but for the 9th iteration, it displays Best School and then Hi on a new line.
 
 i=1
-while [ $i -l 11 ]; do 
+while [ $i -le 10 ]; do 
     echo "Best School"
 
     if [ $i -eq 9 ]; then 
