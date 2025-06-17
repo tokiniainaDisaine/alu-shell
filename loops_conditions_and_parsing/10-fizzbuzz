@@ -5,8 +5,8 @@
 # It displays Buzz when the number is a multiple of 5
 
 for i in {1..100}; do 
-    modulo_3=$(($i%3))
-    modulo_5=$(($i%5))
+    modulo_3=$((i%3))
+    modulo_5=$((i%5))
 
 
     if [[ $modulo_3 -eq 0 && $modulo_5 -eq 0 ]]; then 
