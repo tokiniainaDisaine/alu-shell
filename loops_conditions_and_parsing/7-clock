@@ -4,17 +4,17 @@
 # display minutes from 1 to 59
 
 i=0
+hour=0
 
-while [ i < 42481 ]; do 
+while [ i -lt 42481 ]; do 
     minute=$(($i%60))
-    hour=0
 
-    if [ $minute == 0 ]; then 
+    if [ $minute -eq 0 ]; then 
         echo "Hour: $hour"
-        hour+=1
+        ((hour+=1))
     else
         echo "$minute"
     fi
 
-    $i+=1
+    ((i+=1))
 done
