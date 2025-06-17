@@ -6,5 +6,6 @@
 
 dir=$(pwd)
 for file in $dir; do
-    cut -d "-" -f 2
+    result=$(cut -d "-" -f 2)
+    echo $result
 done
