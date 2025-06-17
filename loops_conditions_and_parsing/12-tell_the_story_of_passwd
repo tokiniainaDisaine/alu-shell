@@ -4,9 +4,11 @@
 while IFS=: read -r f1 f2 f3 f4 f5 f6 f7; do
     user=$f1
     password=$f2
-    id=$f3
+    user_id=$f3
+    id=$f4
+    uif=$f5
     dir_path=$f6
     dir_path_2=$f7
-    
-    echo "The user $user is part of the $id gang, lives in $dir_path and rides $dir_path_2. $id's place is protected by the passcode $password, more info about the user here: $user"
+
+    echo "The user $user is part of the $id gang, lives in $dir_path and rides $dir_path_2. $user_id's place is protected by the passcode $password, more info about the user here: $uif"
 done < /etc/passwd
