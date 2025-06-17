@@ -6,7 +6,7 @@
 i=0
 hour=0
 
-while [ i -lt 42481 ]; do 
+while [ $i -lt 42481 ]; do 
     minute=$(($i%60))
 
     if [ $minute -eq 0 ]; then 
