@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This Bash script displays Best School 10 times using an until loop.
 
 i=0
