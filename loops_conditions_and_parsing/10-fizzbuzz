@@ -9,11 +9,11 @@ for i in {1..100}; do
     modulo_5=$(($i%5))
 
 
-    if [ $modulo_3 -eq 0 && $modulo_5 -eq 0 ]; then 
+    if [[ $modulo_3 -eq 0 && $modulo_5 -eq 0 ]]; then 
         echo "FizzBuzz"
-    elif [ $modulo_3 -eq 0 ]; then 
+    elif [[ $modulo_3 -eq 0 ]]; then 
         echo "Fizz"
-    elif [ $modulo_5 -eq 0 ]; then 
+    elif [[ $modulo_5 -eq 0 ]]; then 
         echo "Buzz"
     else
         echo "$i"
