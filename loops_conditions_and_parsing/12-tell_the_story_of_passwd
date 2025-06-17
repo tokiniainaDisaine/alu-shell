@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while read p; do
+    user=$(cut -d ':' -f 1)
+    password=$(cut -d ':' -f 2)
+    id=$(cut -d ':' -f 3)
+    dir_path=$(rev | cut -d ':' -f 2 | rev)
+    dir_path_2=$(rev | cut -d ':' -f 1 | rev)
+
+    echo "The user $user is part of the $id gang, lives in $dir_path and rides $dir_path_2. $id's place is protected by the passcode $password, more info about the user here: $user"
+done < /etc/passwd

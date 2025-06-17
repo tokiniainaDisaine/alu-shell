@@ -1,0 +1,4 @@
+#!/bin/bash
+# This Bash script groups visitors by IP and HTTP status code, and displays this data
+
+idk
