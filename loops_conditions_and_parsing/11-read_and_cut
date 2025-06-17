@@ -2,7 +2,7 @@
 # This bash script displays the content of the file /etc/passwd
 
 
-while read -r p; do
+while read -r; do
     user=$(cut -d ':' -f 1)
     id=$(cut -d ':' -f 3)
     dir_path=$(rev | cut -d ':' -f 2 | rev)
