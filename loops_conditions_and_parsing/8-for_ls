@@ -4,8 +4,6 @@
 # In a list format
 # Where only the part of the name after the first dash is displayed
 
-dir=$(pwd)
-for file in $dir; do
-    result=$(cut -d "-" -f 2)
-    echo $result
+for file in *; do
+    echo "$file" | cut -d "-" -f 2
 done
