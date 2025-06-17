@@ -5,12 +5,15 @@
 # It displays Buzz when the number is a multiple of 5
 
 for i in {1..100}; do 
-    
-    if [ (($i%3)) -eq 0 && (($i%5)) -eq 0 ]; then 
+    modulo_3=$(($i%3))
+    modulo_5=$(($i%5))
+
+
+    if [ $modulo_3 -eq 0 && $modulo_5 -eq 0 ]; then 
         echo "FizzBuzz"
-    elif [ (($i%3)) -eq 0 ]; then 
+    elif [ $modulo_3 -eq 0 ]; then 
         echo "Fizz"
-    elif [ (($i%5)) -eq 0 ]; then 
+    elif [ $modulo_5 -eq 0 ]; then 
         echo "Buzz"
     else
         echo "$i"
