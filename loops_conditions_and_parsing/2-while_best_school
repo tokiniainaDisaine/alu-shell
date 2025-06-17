@@ -3,7 +3,7 @@
 
 i=0
 
-while [ i -l 10 ]; do 
+while [ $i -l 10 ]; do 
     echo "Best School"
     $(($i+=1))
 done
