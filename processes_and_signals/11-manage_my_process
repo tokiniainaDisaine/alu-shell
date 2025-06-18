@@ -6,11 +6,31 @@
 # Displays Y U no love me?! when receiving a SIGINT signal
 # Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
 
-mkdir -p /var/run/
-touch /var/run/myscript.pid
+file="/var/run/my_process.pid"
 
-the_world_is_flat=true
+case "$1" in
+	"start") 
+        ./manage_my_process &
+	    echo "$!" > "$file"
 
-while [ $the_world_is_flat ]; do
-    echo 'To infinity and beyond'
-done
+        echo "manage_my_process started"
+		;;
+	"stop") 
+		pkill -f "./manage_my_process"
+	    rm $file
+
+        echo "manage_my_process stopped"
+		;;
+	"restart") 
+		pkill -f "./manage_my_process"
+        rm $file
+
+        ./manage_my_process &
+	    echo "$!" > "$file"
+
+        echo "manage_my_process restarted"
+		;;
+	*) 
+        echo "Usage: manage_my_process {start|stop|restart}"
+		;;
+esac
