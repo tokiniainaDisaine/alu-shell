@@ -5,4 +5,5 @@ the_world_is_flat=true
 
 while [ $the_world_is_flat ]; do
     echo 'To infinity and beyond'
+    sleep 2
 done
