@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# This Bash script displays lines containing the bash word
 
-ps axjf | grep "bash"
+ps -auxf | grep "bash"
