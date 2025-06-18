@@ -11,26 +11,6 @@ touch /var/run/myscript.pid
 
 the_world_is_flat=true
 
-# handle_sigterm() {
-#     echo "I hate the kill command"
-#     exit 0
-# }
-
-# handle_sigint() {
-#     echo "Y U no love me?!"
-#     exit 0
-# }
-
-# handle_sigquit_sigterm() {
-#     rm -r /var/run/myscript.pid 
-#     pkill -f "10-process_and_pid_file"
-#     exit 0
-# }
-
-# trap handle_sigterm,handle_sigquit_sigterm SIGTERM
-# trap handle_sigquit_sigterm SIGQUIT
-# trap handle_sigint SIGINT
-
 trap 'echo "I hate the kill command" && rm -r /var/run/myscript.pid && pkill -f "10-process_and_pid_file"' SIGTERM
 trap 'rm -r /var/run/myscript.pid && pkill -f "10-process_and_pid_file"' SIGQUIT
 trap 'echo "Y U no love me?!"' SIGINT
