@@ -6,12 +6,8 @@
 
 the_world_is_flat=true
 
-handle_sigterm() {
-    echo "I am invincible!!!"
-    exit 0
-}
 
-trap handle_sigterm SIGTERM
+trap "I am invincible!!!" SIGTERM
 
 while [ $the_world_is_flat ]; do
     echo 'To infinity and beyond'
