@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This Bash (init) script manages manage_my_process
+
+touch tmp/my_process 
+
+the_world_is_flat=true
+
+while [ $the_world_is_flat ]; do
+    echo "I am alive!" >> /tmp/my_process
+    sleep 2 
+done

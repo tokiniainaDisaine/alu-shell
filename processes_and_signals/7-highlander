@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This Bash script displays:
+# To infinity and beyond indefinitely
+# With a sleep 2 in between each iteration
+# I am invincible!!! when receiving a SIGTERM signal
+
+the_world_is_flat=true
+
+handle_sigterm() {
+    echo "I am invincible!!!"
+    exit 0
+}
+
+trap handle_sigterm SIGTERM
+
+while [ $the_world_is_flat ]; do
+    echo 'To infinity and beyond'
+    sleep 2
+done
